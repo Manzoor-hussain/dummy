@@ -1,0 +1,147 @@
+{
+	"info": {
+		"_postman_id": "345edb0e-922d-4e19-88d4-d6caba638df3",
+		"name": "Paytm",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "18521699"
+	},
+	"item": [
+		{
+			"name": "Paytm Request Token",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"api_key\":\"f0dd11dfd5a34738aea201ff1b83f7bd\",\"api_secret_key\":\"61b7a07196cf422daa8fad7b614a294a\",\"request_token\":\"0e36707c07b94d24a21888e507096313\"}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://developer.paytmmoney.com/accounts/v2/gettoken",
+					"protocol": "https",
+					"host": [
+						"developer",
+						"paytmmoney",
+						"com"
+					],
+					"path": [
+						"accounts",
+						"v2",
+						"gettoken"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Paytm Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"api_key\":\"f0dd11dfd5a34738aea201ff1b83f7bd\",\"api_secret_key\":\"61b7a07196cf422daa8fad7b614a294a\",\"request_token\":\"0e36707c07b94d24a21888e507096313\"}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://login.paytmmoney.com/merchant-login?apiKey=f0dd11dfd5a34738aea201ff1b83f7bd&state=61b7a07196cf422daa8fad7b614a294a&callback=https://apiledevelopers.xyz/algo/packages_new/paytm/requestToken.php",
+					"protocol": "https",
+					"host": [
+						"login",
+						"paytmmoney",
+						"com"
+					],
+					"path": [
+						"merchant-login"
+					],
+					"query": [
+						{
+							"key": "apiKey",
+							"value": "f0dd11dfd5a34738aea201ff1b83f7bd"
+						},
+						{
+							"key": "state",
+							"value": "61b7a07196cf422daa8fad7b614a294a"
+						},
+						{
+							"key": "callback",
+							"value": "https://apiledevelopers.xyz/algo/packages_new/paytm/requestToken.php"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Funds Summary",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-jwt-token",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJtZXJjaGFudCIsImlzcyI6InBheXRtbW9uZXkiLCJpZCI6MTg1NDU5LCJleHAiOjE2ODMxMzg1OTl9.C-gEPET4jKrmEpFy-1tGXyuz0OdDSb3UqeG9oShSYrU\",\"public_access_token\":\"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJtZXJjaGFudCIsImlzcyI6InBheXRtbW9uZXkiLCJpZCI6MTg1NDU5LCJleHAiOjE2ODMxMzg1OTl9.cusDfJ5ZpfadBag2Ez2-yKQIkYq8XZyEW3_72cL77hk",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://developer.paytmmoney.com/accounts/v1/funds/summary?config=true",
+					"protocol": "https",
+					"host": [
+						"developer",
+						"paytmmoney",
+						"com"
+					],
+					"path": [
+						"accounts",
+						"v1",
+						"funds",
+						"summary"
+					],
+					"query": [
+						{
+							"key": "config",
+							"value": "true"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Portfolio management",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-jwt-token",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJtZXJjaGFudCIsImlzcyI6InBheXRtbW9uZXkiLCJpZCI6MTg1NDU5LCJleHAiOjE2ODMxMzg1OTl9.C-gEPET4jKrmEpFy-1tGXyuz0OdDSb3UqeG9oShSYrU\",\"public_access_token\":\"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJtZXJjaGFudCIsImlzcyI6InBheXRtbW9uZXkiLCJpZCI6MTg1NDU5LCJleHAiOjE2ODMxMzg1OTl9.cusDfJ5ZpfadBag2Ez2-yKQIkYq8XZyEW3_72cL77hk",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://developer.paytmmoney.com/holdings/v1/get-user-holdings-data",
+					"protocol": "https",
+					"host": [
+						"developer",
+						"paytmmoney",
+						"com"
+					],
+					"path": [
+						"holdings",
+						"v1",
+						"get-user-holdings-data"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
